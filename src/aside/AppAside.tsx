@@ -41,10 +41,6 @@ function AppAside({view, setView}: AppAsideProps) {
           <TransactionIcon />
           {"Swap settings"}
         </ToggleButton>
-        <ToggleButton value={ConfigurationView.Connection}>
-          <WalletIcon />
-          {"Connection settings"}
-        </ToggleButton>
         <ToggleButton value={ConfigurationView.Styling}>
           <BoxIcon />
           {"Styling"}

@@ -4,21 +4,41 @@ import {Textarea} from "@hipo/react-ui-toolkit";
 import {Box} from "@mui/material";
 
 import ConfigurationViewTitle from "../title/ConfigurationViewTitle";
-import {useConfigurationState} from "../../context/ConfigurationContext";
-import {WidgetController} from "@tinymanorg/tinyman-swap-widget-sdk";
+import {
+  useConfigurationDispatch,
+  useConfigurationState
+} from "../../context/ConfigurationContext";
+import {
+  GenerateWidgetIframeUrlParams,
+  WidgetController
+} from "@tinymanorg/tinyman-swap-widget-sdk";
 import Line from "../../../component/line/Line";
 
 import "./_configuration-export-view.scss";
 import ClipboardButton from "../../../component/clipboard/button/ClipboardButton";
+import OnOffToggleContainer from "../../../component/on-off-toggle/container/OnOffToggleContainer";
+import {OnOffToggleValue} from "../../../component/on-off-toggle/OnOffToggle";
 
 function ConfigurationExportView() {
   const configuration = useConfigurationState();
+  const dispatch = useConfigurationDispatch();
   const widgetIframeUrl = WidgetController.generateWidgetIframeUrl(configuration);
   const iframeEmbedCode = `<iframe title="tinyman swap widget" src="${widgetIframeUrl}" style="width: 415px; height: 440px; border: none;" sandbox="allow-same-origin allow-scripts allow-popups allow-forms" />`;
 
   return (
     <div className={"configuration-export-view"}>
       <ConfigurationViewTitle>{"Export the widget"}</ConfigurationViewTitle>
+
+      <OnOffToggleContainer
+        value={configuration.useParentSigner ? OnOffToggleValue.Off : OnOffToggleValue.On}
+        onToggle={handleToggleUseParentSigner}
+        title={"Local signer"}
+        description={
+          "The widget will use wallet connection inside widget ('local signer')"
+        }
+      />
+
+      <Line margin={"32px 0"} />
 
       <p className={"typography--secondary-body"}>
         {
@@ -157,6 +177,25 @@ function ConfigurationExportView() {
       )}
     </div>
   );
+
+  function handleToggleUseParentSigner() {
+    let payload: GenerateWidgetIframeUrlParams = configuration;
+
+    if (configuration.useParentSigner) {
+      payload = {...payload, useParentSigner: false};
+    } else {
+      payload = {
+        ...payload,
+        useParentSigner: true,
+        accountAddress: "YOUR_ACCOUNT_ADDRESS_VARIABLE_NAME"
+      };
+    }
+
+    dispatch({
+      type: "SET_CONFIGURATION",
+      payload
+    });
+  }
 }
 
 export default ConfigurationExportView;

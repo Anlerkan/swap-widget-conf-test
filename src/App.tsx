@@ -7,7 +7,6 @@ import ConfigurationContextProvider from "./configuration/context/ConfigurationC
 import {ConfigurationView} from "./core/util/commonTypes";
 import ConfigurationSwapView from "./configuration/view/swap/ConfigurationSwapView";
 import ConfiguredWidget from "./widget/ConfiguredWidget";
-import ConfigurationConnectionView from "./configuration/view/connection/ConfigurationConnectionView";
 import ConfigurationStylingView from "./configuration/view/styling/ConfigurationStylingView";
 import ConfigurationExportView from "./configuration/view/export/ConfigurationExportView";
 
@@ -34,10 +33,6 @@ function App() {
     switch (view) {
       case ConfigurationView.Swap:
         configurationView = <ConfigurationSwapView />;
-        break;
-
-      case ConfigurationView.Connection:
-        configurationView = <ConfigurationConnectionView />;
         break;
 
       case ConfigurationView.Styling:
