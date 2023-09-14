@@ -1,0 +1,138 @@
+@import "../core/ui/style/typography/typography-mixins.scss";
+
+.app-aside {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+
+  padding-top: 28px;
+
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+
+  min-height: 100vh;
+  height: 100%;
+
+  > * {
+    margin-right: 28px;
+    margin-left: 28px;
+  }
+}
+
+.app-aside__title {
+  margin-top: 16px;
+  margin-bottom: 74px;
+}
+
+.app-aside__configuration-toggle-buttons {
+  align-items: flex-start;
+
+  width: 100%;
+
+  margin: 16px 0 24px 0;
+
+  background-color: transparent;
+
+  button {
+    position: relative;
+
+    @include typography--body();
+    @include is-semi-bold-text();
+
+    display: flex;
+    gap: 12px;
+
+    border-radius: 0;
+
+    svg {
+      margin-left: 24px;
+    }
+
+    color: var(--text-gray-lighter);
+
+    border: none;
+
+    text-transform: capitalize;
+
+    &:hover {
+      background-color: transparent;
+    }
+
+    .MuiTouchRipple-root {
+      display: none;
+    }
+  }
+
+  button.Mui-selected {
+    background-color: transparent;
+
+    color: var(--text-main);
+
+    &:hover {
+      background-color: transparent;
+    }
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      left: 0;
+
+      width: 2px;
+      height: 100%;
+
+      background-color: var(--text-main);
+    }
+  }
+}
+
+.app-aside__export-button-wrapper {
+  margin: 0 16px;
+}
+
+.app-aside__export-button {
+  width: 100%;
+
+  cursor: pointer;
+
+  height: 48px;
+  color: white;
+
+  background-color: var(--helper-sky);
+
+  outline: none;
+  border: none;
+  border-radius: 8px;
+}
+
+.app-aside__useful-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  margin-top: 64px;
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: var(--text-gray-lighter);
+
+    @include typography--body();
+
+    &:hover {
+      color: var(--text-main);
+    }
+  }
+}
+
+.app-aside__copyright {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+
+  margin-top: auto;
+  margin-bottom: 28px;
+}

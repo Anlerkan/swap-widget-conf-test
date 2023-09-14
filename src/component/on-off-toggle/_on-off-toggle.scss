@@ -1,0 +1,34 @@
+.on-off-toggle {
+  width: 83px;
+  height: 32px;
+
+  .list-item__click-wrapper {
+    &:hover,
+    &:focus {
+      border-radius: unset;
+    }
+  }
+
+  &.toggle {
+    grid-template-columns: 1fr 1fr;
+    gap: unset;
+
+    border: 1px solid var(--border-default);
+  }
+
+  .toggle-item {
+    color: var(--text-gray-lighter);
+    background-color: var(--layer-1);
+
+    border-radius: unset;
+
+    &--is-selected {
+      color: var(--button-default-pressed-text);
+      background-color: var(--button-default-pressed-bg);
+    }
+
+    .list-item__click-wrapper {
+      padding: 0;
+    }
+  }
+}

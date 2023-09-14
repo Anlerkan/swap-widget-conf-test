@@ -1,0 +1,135 @@
+@mixin typography--h1() {
+  font-family: "Tiny", monospace;
+  font-size: 64px;
+  font-weight: 300;
+  line-height: 84px;
+  letter-spacing: -6px;
+}
+
+@mixin typography--h2() {
+  font-family: "Tiny", monospace;
+  font-size: 48px;
+  font-weight: 300;
+  line-height: 64px;
+  letter-spacing: -4px;
+}
+
+@mixin typography--h3() {
+  font-family: "Tiny", monospace;
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 52px;
+  letter-spacing: -4px;
+}
+
+@mixin typography--subtitle() {
+  font-family: "Tiny", monospace;
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 34px;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+}
+
+@mixin typography--secondary-subtitle() {
+  font-family: "Barlow", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: normal;
+}
+
+@mixin typography--body() {
+  font-family: "Barlow", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: normal;
+}
+
+@mixin typography--secondary-body() {
+  font-family: "Barlow", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: normal;
+}
+
+@mixin typography--button() {
+  font-family: "Barlow", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+@mixin typography--caption() {
+  font-family: "Barlow", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: normal;
+}
+
+@mixin typography--overline() {
+  font-family: "Barlow", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+@mixin typography--tiny() {
+  font-family: "Barlow", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: -0.02em;
+}
+
+@mixin is-thin-text() {
+  font-weight: 100;
+}
+
+@mixin is-extra-light-text() {
+  font-weight: 200;
+}
+
+@mixin is-light-text() {
+  font-weight: 300;
+}
+
+@mixin is-regular-text() {
+  font-weight: 400;
+}
+
+@mixin is-medium-text() {
+  font-weight: 500;
+}
+
+@mixin is-semi-bold-text() {
+  font-weight: 600;
+}
+
+@mixin is-bold-text() {
+  font-weight: 700;
+}
+
+@mixin is-extra-bold-text() {
+  font-weight: 800;
+}
+
+@mixin truncate-text() {
+  display: inline-block;
+
+  max-width: 100%;
+
+  overflow: hidden;
+
+  vertical-align: top;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

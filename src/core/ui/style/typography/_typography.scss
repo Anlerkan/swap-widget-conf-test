@@ -1,0 +1,95 @@
+@import "./typography-mixins";
+
+.typography--h1 {
+  @include typography--h1();
+}
+
+.typography--h2 {
+  @include typography--h2();
+}
+
+.typography--h3 {
+  @include typography--h3();
+}
+
+.typography--subtitle {
+  @include typography--subtitle();
+}
+
+.typography--subtitle--bold {
+  @include typography--subtitle();
+  @include is-medium-text();
+}
+
+.typography--secondary-subtitle {
+  @include typography--secondary-subtitle();
+}
+
+.typography--body {
+  @include typography--body();
+}
+
+.typography--secondary-body {
+  @include typography--secondary-body();
+}
+
+.typography--button {
+  @include typography--button();
+}
+
+.typography--caption {
+  @include typography--caption();
+}
+
+.typography--overline {
+  @include typography--overline();
+}
+
+.typography--tiny {
+  @include typography--tiny();
+}
+
+.typography--tiny--bold {
+  @include typography--tiny();
+  @include is-semi-bold-text();
+}
+
+.is-regular-text {
+  @include is-regular-text();
+}
+
+.is-medium-text {
+  @include is-medium-text();
+}
+
+.is-semi-bold-text {
+  @include is-semi-bold-text();
+}
+
+.is-bold-text {
+  @include is-bold-text();
+}
+
+.is-uppercased-text {
+  text-transform: uppercase;
+}
+
+.is-capitalized-text {
+  text-transform: capitalize;
+}
+
+.is-truncated-text {
+  @include truncate-text();
+}
+
+.is-centered-text {
+  text-align: center;
+}
+
+.text-decoration--underline {
+  text-decoration: underline;
+}
+
+.text-decoration-style--dotted {
+  text-decoration-style: dotted;
+}

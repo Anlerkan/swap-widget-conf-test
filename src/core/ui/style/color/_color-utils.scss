@@ -1,0 +1,13 @@
+@import "theme";
+
+@each $name, $color in $light-theme-map {
+  .color--#{$name} {
+    color: var(--#{$name});
+  }
+}
+
+@each $name, $color in $dark-theme-map {
+  .color--#{$name} {
+    color: var(--#{$name});
+  }
+}

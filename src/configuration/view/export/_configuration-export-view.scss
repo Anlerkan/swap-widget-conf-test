@@ -1,0 +1,51 @@
+.configuration-export-view {
+  h2 {
+    margin-bottom: 12px;
+  }
+
+  code {
+    padding: 16px;
+    border-radius: 8px;
+    background-color: var(--gray-100);
+  }
+
+  .textarea {
+    padding: 16px !important;
+
+    border-radius: 8px !important;
+
+    &:disabled {
+      background-color: white;
+    }
+  }
+}
+
+.configuration-export-view__iframe-embed-code-wrapper {
+  position: relative;
+}
+
+.configuration-export-view__iframe-embed-code-title {
+  position: absolute;
+  left: 10px;
+  top: 17px;
+
+  background-color: white;
+
+  padding: 0 3px;
+}
+
+.configuration-export-view__iframe-embed-code {
+  width: 374px;
+  min-height: 203px !important;
+
+  margin-top: 25px;
+  margin-bottom: 16px;
+}
+
+.configuration-export-view__parameters-object {
+  width: 374px;
+  min-height: 278px !important;
+
+  margin-top: 25px;
+  margin-bottom: 16px;
+}

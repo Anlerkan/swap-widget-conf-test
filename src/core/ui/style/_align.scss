@@ -1,0 +1,49 @@
+.is-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.is-vertically-centered {
+  display: flex;
+  align-items: center;
+}
+
+.is-horizontally-centered {
+  display: flex;
+  justify-content: center;
+}
+
+.has-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-left-aligned {
+  text-align: left;
+}
+
+.text-right-aligned {
+  text-align: right;
+}
+
+.is-aligned-right {
+  justify-self: right;
+
+  text-align: right;
+}
+
+.is-flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrap-flex {
+  flex-wrap: wrap;
+}
+
+.auto-grid-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 12px;
+}

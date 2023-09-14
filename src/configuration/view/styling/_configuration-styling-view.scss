@@ -1,0 +1,63 @@
+.configuration-styling-view {
+  .MuiTextField-root {
+    width: 179px;
+
+    height: 40px;
+  }
+
+  .MuiInputBase-root {
+    width: 179px;
+  }
+
+  .MuiToggleButtonGroup-root {
+    gap: 12px;
+  }
+}
+
+.configuration-styling-view__color-container {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 16px;
+
+  .MuiTextField-root {
+    margin-bottom: 8px;
+  }
+}
+
+.configuration-styling-view__subtitle {
+  margin-bottom: 23px;
+}
+
+.configuration-styling-view__border-radius-size-toggle-button-group {
+  margin-bottom: 20px;
+
+  .configuration-swap-view .MuiToggleButtonGroup-root {
+    margin-bottom: 0 !important;
+  }
+
+  .MuiToggleButton-root {
+    width: 84px;
+    height: 36px;
+
+    border: 1px solid var(--border-default) !important;
+
+    margin: 0 !important;
+
+    border-radius: 8px !important;
+
+    text-transform: capitalize;
+
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12);
+
+    &.Mui-selected {
+      box-shadow: none;
+
+      color: var(--text-gray);
+    }
+  }
+
+  .MuiOutlinedInput-root {
+    height: 36px !important;
+  }
+}

@@ -1,0 +1,232 @@
+/* stylelint-disable indentation */
+/* stylelint-disable scss/dollar-variable-empty-line-before */
+$light-theme-map: (
+  "background": var(--white),
+  "background-rgb": var(--white-rgb),
+  "secondary-gradient":
+    linear-gradient(
+      180deg,
+      rgba(var(--blue-500-rgb), 0.6) 0%,
+      rgba(var(--blue-100-rgb), 0.12) 100.19%
+    ),
+  "secondary-gradient-reverse":
+    linear-gradient(
+      180deg,
+      rgba(var(--blue-100-rgb), 0.12) 0%,
+      rgba(var(--blue-500-rgb), 0.6) 100.19%
+    ),
+  "glass-secondary":
+    linear-gradient(
+      180deg,
+      rgba(var(--blue-500-rgb), 0.06) 0%,
+      rgba(var(--blue-500-rgb), 0.18) 100.18%
+    ),
+  "glass-purple":
+    linear-gradient(
+      180deg,
+      rgba(var(--pink-800-rgb), 0.06) 0%,
+      rgba(var(--pink-800-rgb), 0.18) 100.18%
+    ),
+  "linear-orange":
+    linear-gradient(
+      180deg,
+      rgba(var(--red-300-rgb), 0) 0%,
+      rgba(var(--red-300-rgb), 0.1) 100%
+    ),
+  "radial-background":
+    radial-gradient(
+      50% 100% at 50% 0%,
+      rgba(182, 182, 182, 0.1) 0%,
+      rgba(182, 182, 182, 0) 100%
+    ),
+  "radial-secondary":
+    radial-gradient(
+      50% 100% at 50% 0%,
+      rgba(var(--blue-500-rgb), 0.1) 0%,
+      rgba(var(--blue-500-rgb), 0) 100%
+    ),
+  "radial-peace":
+    radial-gradient(
+      50% 100% at 50% 0%,
+      rgba(var(--green-600-rgb), 0.1) 0%,
+      rgba(var(--green-600-rgb), 0) 100%
+    ),
+  "radial-danger":
+    radial-gradient(
+      50% 100% at 50% 0%,
+      rgba(var(--red-700-rgb), 0.1) 0%,
+      rgba(var(--red-700-rgb), 0) 100%
+    ),
+  "text-main": var(--black),
+  "text-gray": var(--gray-600),
+  "text-gray-lighter": var(--gray-500),
+  "text-gray-lighter-rgb": var(--gray-500-rgb),
+  "text-gray-lightest": var(--gray-400),
+  "border-default": rgba(var(--black-rgb), 8%),
+  "border-thick": rgba(var(--black-rgb), 20%),
+  "layer-1": var(--white),
+  "layer-2": var(--gray-100),
+  "layer-3": var(--gray-100),
+  "layer-4": var(--gray-100),
+  "soft-area": var(--gray-100),
+  "soft-area-active": var(--gray-200),
+  "soft-element": var(--gray-600),
+  "highlighted": var(--black),
+  "button-default-text": var(--gray-600),
+  "button-default-bg": var(--gray-100),
+  "button-default-hover-bg": var(--gray-200),
+  "button-default-pressed-bg": var(--gray-700),
+  "button-default-pressed-text": var(--white),
+  "button-ghost-text": var(--gray-500),
+  "button-ghost-hover-text": var(--gray-600),
+  "button-secondary-text": var(--white),
+  "button-secondary-bg": var(--blue-500),
+  "button-secondary-hover-bg": var(--blue-300),
+  "button-disabled-text": var(--gray-500),
+  "button-disabled-bg": var(--gray-100),
+  "overlay-high": rgba(var(--gray-850-rgb), 0.5),
+  "overlay-medium": rgba(var(--gray-850-rgb), 0.3),
+  "overlay-low": rgba(var(--gray-850-rgb), 0.15),
+  "secondary-900": var(--blue-500),
+  "secondary-900-rgb": var(--blue-500-rgb),
+  "secondary-100-rgb": var(--blue-100-rgb),
+  "helper-yellow": var(--red-200),
+  "helper-danger": var(--red-700),
+  "helper-peace": var(--green-600),
+  "helper-aqua": var(--aqua-500),
+  "helper-orange": var(--red-300),
+  "helper-blue": var(--blue-500),
+  "helper-sky": var(--blue-250),
+  "helper-purple": var(--pink-800),
+  "helper-neutral": var(--gray-500),
+  "helper-neutral-rgb": var(--gray-500-rgb)
+);
+$dark-theme-map: (
+  "background": var(--gray-800),
+  "background-rgb": var(--gray-800-rgb),
+  "secondary-gradient":
+    linear-gradient(
+      180deg,
+      rgba(var(--pink-500-rgb), 0.6) 0%,
+      rgba(var(--pink-500-rgb), 0) 100%
+    ),
+  "secondary-gradient-reverse":
+    linear-gradient(
+      180deg,
+      rgba(var(--pink-500-rgb), 0) 0%,
+      rgba(var(--pink-500-rgb), 0.6) 100%
+    ),
+  "glass-secondary":
+    linear-gradient(
+      180deg,
+      rgba(var(--pink-500-rgb), 0.06) 0%,
+      rgba(var(--pink-500-rgb), 0.18) 100.18%
+    ),
+  "glass-purple":
+    linear-gradient(
+      180deg,
+      rgba(var(--pink-750-rgb), 0.06) 0%,
+      rgba(var(--pink-750-rgb), 0.18) 100.18%
+    ),
+  "linear-orange":
+    linear-gradient(
+      180deg,
+      rgba(var(--red-300-rgb), 0) 0%,
+      rgba(var(--red-300-rgb), 0.1) 100%
+    ),
+  "radial-background":
+    radial-gradient(
+      50% 100% at 50% 0%,
+      rgba(23, 23, 23, 0.8) 0%,
+      rgba(23, 23, 23, 0.8) 0.01%,
+      rgba(23, 23, 23, 0) 99.99%,
+      rgba(38, 38, 38, 0) 100%,
+      rgba(38, 38, 38, 0) 100%
+    ),
+  "radial-secondary":
+    radial-gradient(
+      50% 100% at 50% 0%,
+      rgba(var(--pink-500-rgb), 0.1) 0%,
+      rgba(var(--pink-500-rgb), 0) 100%
+    ),
+  "radial-peace":
+    radial-gradient(
+      50% 100% at 50% 0%,
+      rgba(42, 214, 142, 0.1) 0%,
+      rgba(42, 214, 142, 0) 100%
+    ),
+  "radial-danger":
+    radial-gradient(
+      50% 100% at 50% 0%,
+      rgba(var(--red-500-rgb), 0.1) 0%,
+      rgba(var(--red-500-rgb), 0) 100%
+    ),
+  "text-main": var(--white),
+  "text-gray": var(--gray-400),
+  "text-gray-lighter": var(--gray-500),
+  "text-gray-lighter-rgb": var(--gray-500-rgb),
+  "text-gray-lightest": var(--gray-500),
+  "border-default": rgba(var(--white-rgb), 8%),
+  "border-thick": rgba(var(--white-rgb), 16%),
+  "layer-1": var(--gray-700),
+  "layer-2": var(--gray-800),
+  "layer-3": var(--gray-600),
+  "layer-4": var(--gray-850),
+  "soft-area": var(--gray-600),
+  "soft-area-active": var(--gray-700),
+  "soft-element": var(--gray-400),
+  "highlighted": var(--lime-500),
+  "button-default-text": var(--gray-400),
+  "button-default-bg": var(--gray-600),
+  "button-default-hover-bg": var(--gray-700),
+  "button-default-pressed-bg": var(--lime-500),
+  "button-default-pressed-text": var(--black),
+  "button-ghost-text": var(--gray-400),
+  "button-ghost-hover-text": var(--gray-400),
+  "button-secondary-text": var(--black),
+  "button-secondary-bg": var(--pink-500),
+  "button-secondary-hover-bg": var(--pink-400),
+  "button-disabled-text": var(--gray-500),
+  "button-disabled-bg": var(--gray-600),
+  "overlay-high": rgba(var(--gray-850-rgb), 0.9),
+  "overlay-medium": rgba(var(--gray-850-rgb), 0.5),
+  "overlay-low": rgba(var(--gray-850-rgb), 0.25),
+  "secondary-900": var(--pink-500),
+  "secondary-900-rgb": var(--pink-500-rgb),
+  "secondary-100-rgb": var(--pink-500-rgb),
+  "helper-yellow": var(--red-200),
+  "helper-danger": var(--red-500),
+  "helper-peace": var(--green-300),
+  "helper-aqua": var(--aqua-300),
+  "helper-orange": var(--red-300),
+  "helper-blue": var(--blue-300),
+  "helper-sky": var(--blue-200),
+  "helper-purple": var(--pink-750),
+  "helper-neutral": var(--gray-400),
+  "helper-neutral-rgb": var(--gray-400-rgb)
+);
+
+$helper-theme-map: (
+  "light": (
+    "secondary-900": --blue-500,
+    "helper-danger": --red-700,
+    "helper-peace": --green-600,
+    "helper-aqua": --aqua-500,
+    "helper-orange": --red-300,
+    "helper-blue": --blue-500,
+    "helper-sky": --blue-250,
+    "helper-purple": --pink-800,
+    "helper-neutral": --gray-500
+  ),
+  "dark": (
+    "secondary-900": --pink-500,
+    "helper-danger": --red-500,
+    "helper-peace": --green-300,
+    "helper-aqua": --aqua-300,
+    "helper-orange": --red-300,
+    "helper-blue": --blue-300,
+    "helper-sky": --blue-200,
+    "helper-purple": --pink-750,
+    "helper-neutral": --gray-400
+  )
+);

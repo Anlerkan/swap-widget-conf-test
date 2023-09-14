@@ -1,0 +1,43 @@
+.clipboard-button {
+  --clipboard-color: var(--text-main);
+  --button-bg: var(--button-default-bg) !important;
+
+  border-radius: 8px;
+
+  padding: 12px;
+
+  width: 100%;
+}
+
+.clipboard-button--icon-right {
+  .clipboard-button__content {
+    order: 1;
+  }
+
+  .clipboard-button__icon {
+    order: 1;
+  }
+
+  .clipboard-button__copied-message {
+    margin-right: 16px;
+  }
+}
+
+.clipboard-button__content {
+  gap: 8px;
+
+  color: var(--clipboard-color);
+}
+
+.clipboard-button__icon {
+  width: 16px;
+  flex: 0 0 16px;
+
+  margin-top: 2px;
+}
+
+.clipboard-button__copied-message {
+  margin-left: 16px;
+
+  color: var(--clipboard-color);
+}

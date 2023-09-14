@@ -1,0 +1,14 @@
+.app {
+  display: grid;
+  grid-template-columns: 266px 471px 1fr;
+}
+
+.app__configuration {
+  padding: 42px 48px;
+}
+
+.app__configured-widget {
+  background-color: #f8f8f8;
+
+  border-left: 1px solid var(--border-default);
+}

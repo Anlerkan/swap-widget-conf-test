@@ -1,0 +1,23 @@
+@import "theme";
+
+:root {
+  @each $name, $color in $light-theme-map {
+    --#{$name}: #{$color};
+  }
+
+  color-scheme: light;
+
+  background-color: var(--background);
+}
+
+@each $theme, $colors in $helper-theme-map {
+  .#{$theme}-theme {
+    @each $name, $color in $colors {
+      --#{$name}-900-rgb: var(#{$color}-rgb);
+      --#{$name}-800: rgba(var(#{$color}-rgb), 0.9);
+      --#{$name}-300: rgba(var(#{$color}-rgb), 0.35);
+      --#{$name}-200: rgba(var(#{$color}-rgb), 0.2);
+      --#{$name}-100: rgba(var(#{$color}-rgb), 0.15);
+    }
+  }
+}
