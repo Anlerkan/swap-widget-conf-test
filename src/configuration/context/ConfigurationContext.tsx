@@ -19,7 +19,7 @@ export type ConfigurationDispatchContextValue =
   null | React.Dispatch<ConfigurationStateReducerAction>;
 
 const initialConfigurationState: ConfigurationState = {
-  platformName: "Hipo",
+  platformName: "",
   useParentSigner: false,
   assetIds: [0, USDC_ASSET_ID[NetworkToggleValue.MainNet]],
   network: NetworkToggleValue.MainNet,

@@ -22,8 +22,6 @@ function ConfiguredWidget() {
     themeVariables
   } = useConfigurationState();
   const widgetIframeUrlParams = useMemo<GenerateWidgetIframeUrlParams>(() => {
-    console.log(platformFeePercentage, platformFeeAccount);
-
     let params: Partial<GenerateWidgetIframeUrlParams> = {
       network,
       themeVariables,
@@ -58,8 +56,6 @@ function ConfiguredWidget() {
     themeVariables,
     useParentSigner
   ]);
-
-  console.log(WidgetController.generateWidgetIframeUrl(widgetIframeUrlParams));
 
   return (
     <iframe

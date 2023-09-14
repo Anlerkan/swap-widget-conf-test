@@ -2,11 +2,11 @@
   --clipboard-color: var(--text-main);
   --button-bg: var(--button-default-bg) !important;
 
-  border-radius: 8px;
+  width: 100%;
 
   padding: 12px;
 
-  width: 100%;
+  border-radius: 8px !important;
 }
 
 .clipboard-button--icon-right {
