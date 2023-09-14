@@ -48,15 +48,23 @@ function ConfigurationExportView() {
 
       {configuration.useParentSigner ? (
         <>
-          <Textarea
-            customClassNames={{
-              textarea: "configuration-export-view__parameters-object typography--tiny"
-            }}
-            isDisabled={true}
-            onChange={() => undefined}
-            value={JSON.stringify(configuration, null, 2)}
-            name={"parametersObject"}
-          />
+          <div className={"configuration-export-view__iframe-embed-code-wrapper"}>
+            <span
+              className={
+                "configuration-export-view__iframe-embed-code-title typography--tiny color--text-gray"
+              }>
+              {"Parameters Object"}
+            </span>
+            <Textarea
+              customClassNames={{
+                textarea: "configuration-export-view__parameters-object typography--tiny"
+              }}
+              isDisabled={true}
+              onChange={() => undefined}
+              value={JSON.stringify(configuration, null, 2)}
+              name={"parametersObject"}
+            />
+          </div>
 
           <ClipboardButton textToCopy={JSON.stringify(configuration, null, 2)}>
             {"COPY"}
