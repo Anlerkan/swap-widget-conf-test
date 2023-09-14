@@ -102,7 +102,7 @@ function ConfigurationExportView() {
                 {"part with the actual account address variable in your project."}
               </p>
 
-              <div className={"color--text-gray"}>
+              <div className={"typography--caption color--text-gray"}>
                 <span>{"Please see the instructions: "}</span>
                 <a
                   target={"_blank"}
@@ -164,7 +164,7 @@ function ConfigurationExportView() {
                 }
               </code>
 
-              <div className={"color--text-gray"}>
+              <div className={"color--text-gray typography--caption"}>
                 <span>{"Please see the instructions: "}</span>
                 <a
                   target={"_blank"}
